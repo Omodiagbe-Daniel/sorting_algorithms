@@ -21,13 +21,13 @@ void selection_sort(int *array, size_t size)
 			{
 				sort = j;
 			}
-			if (sort != i)
-			{
-				swap = array[sort];
-				array[sort] = array[i];
-				array[i] = swap;
-			}
 		}
-		print_array(array, size);
+		if (sort != i)
+		{
+			swap = array[sort];
+			array[sort] = array[i];
+			array[i] = swap;
+			print_array(array, size);
+		}
 	}
 }
